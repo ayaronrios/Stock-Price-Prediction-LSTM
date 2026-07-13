@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Prediction Results</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- Result Header -->
+    <div class="card result-card">
+
+        <h1>Stock Price Prediction Results</h1>
+
+        <div class="stock-badge">
+            {{ company }} ({{ stock }})
+        </div>
+
+        <div class="price-section">
+            <div class="prediction-box">
+                <h4>Predicted Closing Price</h4>
+                <p>${{ "%.2f"|format(prediction) }}</p>
+            </div>
+
+            <div class="prediction-box">
+                <h4>Actual Closing Price</h4>
+                <p>${{ "%.2f"|format(actual) }}</p>
+            </div>
+        </div>
+
+    </div>
+
+
+    <!-- Performance Metrics -->
+    <h2 class="section-title">Model Performance</h2>
+
+    <div class="metrics">
+
+        <div class="metric-card">
+            <h4>RMSE</h4>
+            <p>{{ "%.2f"|format(rmse) }}</p>
+        </div>
+
+        <div class="metric-card">
+            <h4>MAE</h4>
+            <p>{{ "%.2f"|format(mae) }}</p>
+        </div>
+
+        <div class="metric-card">
+            <h4>MAPE</h4>
+            <p>{{ "%.2f"|format(mape) }}%</p>
+        </div>
+
+        <div class="metric-card">
+            <h4>R² Score</h4>
+            <p>{{ "%.3f"|format(r2) }}</p>
+        </div>
+    </div>
+
+
+
+    <!-- Charts -->
+    <h2 class="section-title">Visualizations</h2>
+    <div class="chart-section">
+
+        <div class="chart-card">
+            <h2>Prediction vs Actual Prices</h2>
+            <img src="{{ url_for('static', filename='images/' + image) }}">
+        </div>
+
+         <div class="chart-card">
+            <h2>Training & Validation Loss</h2>
+            <img src="{{ url_for('static', filename='images/' + loss) }}">
+        </div>
+
+        <div class="chart-card full-width">
+            <h2>Historical Closing Prices</h2>
+            <img src="{{ url_for('static', filename='images/' + history) }}">
+        </div>
+
+    </div>
+
+
+    <!-- Back Button -->
+    <div style="text-align:center; margin-top:50px;">
+        <a href="/" class="back-btn">
+            ← Predict Another Stock
+        </a>
+    </div>
+
+</div>
+
+<footer>
+    <p><strong>Developed by Akshaya Karanam</strong></p>
+    <p>B.Tech – Computer Science and Engineering (AI & ML)</p>
+</footer>
+
+</body>
+</html>

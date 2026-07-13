@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Stock Price Prediction using Deep Learning (LSTM)</title>
+
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+    <div class="card">
+
+    <h1>
+        Stock Price Prediction 
+        <br>
+        using Deep Learning (LSTM)
+    </h1>
+
+    <p class="subtitle">
+        Predict future closing prices using a Long Short-Term Memory (LSTM) neural network trained on historical market data.
+    </p>
+
+    <p class="tech-stack">
+        Python • TensorFlow • Flask • Yahoo Finance • Scikit-learn
+    </p>
+
+        <form action="/predict" method="POST">
+
+            <label for="stock">Select Company</label>
+
+            <select id="stock" name="stock" required>
+
+                <option value="AAPL">Apple (AAPL)</option>
+
+                <option value="MSFT">Microsoft (MSFT)</option>
+
+                <option value="TSLA">Tesla (TSLA)</option>
+
+            </select>
+
+            <button type="submit">
+                Train & Predict
+            </button>
+
+        
+
+            <div class="stats-strip">
+
+                <div>
+                    <h5>Companies</h5>
+                    <p>Apple • Microsoft • Tesla</p>
+                </div>
+
+                <div>
+                    <h5>Historical Data</h5>
+                    <p>2015 – 2025</p>
+                </div>
+
+                <div>
+                    <h5>Model</h5>
+                    <p>LSTM (TensorFlow)</p>
+                </div>
+
+            </div>
+
+        </form>    
+        
+
+</div>
+
+    <div class="features">
+
+        <div class="feature">
+            <h4>MODEL</h4>
+            <p>Long Short-Term Memory (LSTM) neural network for forecasting stock prices.</p>
+        </div>
+
+        <div class="feature">
+            <h4>INPUT</h4>
+            <p>Historical stock prices with preprocessing, scaling and train-test splitting.</p>
+        </div>
+
+        <div class="feature">
+            <h4>OUTPUT</h4>
+            <p>Predicted prices, performance metrics and interactive visualization charts.</p>
+        </div>
+
+    </div>
+
+</div>
+
+<div class="note">
+    <p>
+        <strong>Disclaimer:</strong> 
+        Predictions are generated using historical market data for educational and research purposes only. They should not be interpreted as financial or investment advice.
+    </p>
+</div>
+
+<footer>
+    <p><strong>Developed by Akshaya Karanam</strong></p>
+    <p>B.Tech – Computer Science and Engineering (Artificial Intelligence & Machine Learning)</p>
+</footer>
+    
+
+
+
+
+</body>
+</html>
