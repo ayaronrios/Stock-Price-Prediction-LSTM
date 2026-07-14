@@ -1,0 +1,9 @@
+Date: 2026-07-09 12:43:54.978394
+Company: Microsoft
+Ticker: MSFT
+RMSE: 18.10
+MAE: 15.08
+MAPE: 3.27%
+R²: 0.837
+Latest Predicted Price: $463.33
+Latest Actual Price: $483.62

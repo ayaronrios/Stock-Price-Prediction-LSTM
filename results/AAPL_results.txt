@@ -1,0 +1,9 @@
+Date: 2026-07-13 16:52:56.890427
+Company: Apple
+Ticker: AAPL
+RMSE: 7.51
+MAE: 5.77
+MAPE: 2.49%
+R²: 0.931
+Latest Predicted Price: $258.74
+Latest Actual Price: $271.86
